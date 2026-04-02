@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-ink text-white min-h-screen;
+  background-image: radial-gradient(circle at 10% 20%, rgba(117, 243, 255, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(255, 119, 168, 0.2), transparent 40%);
+}
+
+input,
+button,
+select {
+  @apply outline-none;
+}

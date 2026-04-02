@@ -1,0 +1,24 @@
+{
+  "name": "mangart-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "npm --workspace @mangart/client run dev",
+    "dev:server": "npm --workspace @mangart/server run dev",
+    "build": "npm run build:shared && npm run build:server && npm run build:client",
+    "build:shared": "npm --workspace @mangart/shared run build",
+    "build:server": "npm --workspace @mangart/server run build",
+    "build:client": "npm --workspace @mangart/client run build",
+    "test": "npm --workspace @mangart/server run test",
+    "lint": "npm --workspace @mangart/client run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.3"
+  }
+}
