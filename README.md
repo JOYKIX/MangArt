@@ -4,6 +4,7 @@ Online multiplayer drawing-and-guessing browser game inspired by skribbl.io with
 
 ## Stack
 - Frontend: Next.js + React + TypeScript + Tailwind
+- Entrypoint UI: App Router Next.js (pas de page `index.html` statique à la racine)
 - Backend: Node.js + Express + Socket.IO
 - Shared package: types/events/validation/word list
 - Storage: in-memory room state (PostgreSQL-ready architecture via `RoomManager`)
